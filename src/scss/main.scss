@@ -1,0 +1,20 @@
+// sass --watch src/scss/main.scss:src/styles/main.css
+
+@import 'reset';
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 62.5%;
+	line-height: 1.5;
+	height: auto;
+}
+
+.container {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
