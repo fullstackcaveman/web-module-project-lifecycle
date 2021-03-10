@@ -3,6 +3,8 @@ import axios from 'axios';
 import { BASE_URL } from './config';
 import './styles/main.css';
 import UserCard from './components/UserCard';
+import Header from './components/Header';
+import GitHub from '@material-ui/icons/GitHub';
 
 class App extends Component {
 	state = {
@@ -53,26 +55,23 @@ class App extends Component {
 	render() {
 		console.log(this.state.users);
 		return (
-			<div className='container'>
-				<div className='left'>
-					<h1>App Working</h1>
-					{this.state.users.map((user) => {
-						return <UserCard key={user.id} gitUser={user} />;
-					})}
+			<>
+				<Header
+					submit={this.handleSubmit}
+					change={this.handleChange}
+					value={this.state.formValue}
+				/>
+				<h1>
+					<GitHub /> Git Users
+				</h1>
+				<div className='container'>
+					<div>
+						{this.state.users.map((user) => {
+							return <UserCard key={user.id} gitUser={user} />;
+						})}
+					</div>
 				</div>
-				<div className='right'>
-					<form onSubmit={this.handleSubmit}>
-						<input
-							type='text'
-							name='getUser'
-							placeholder='Search GitHub Users'
-							onChange={this.handleChange}
-							value={this.state.formValue}
-						/>
-						<button>Submit</button>
-					</form>
-				</div>
-			</div>
+			</>
 		);
 	}
 }

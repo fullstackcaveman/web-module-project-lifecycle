@@ -9,10 +9,37 @@ body {
 	height: auto;
 }
 
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	padding: 20px;
+	width: 100%;
+
+	form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
 .container {
 	box-sizing: border-box;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 	width: 100%;
@@ -26,6 +53,7 @@ body {
 		height: 200px;
 		margin: 10px;
 		padding: 0;
+		max-width: 100%;
 
 		&.showFollowers {
 			height: auto;
