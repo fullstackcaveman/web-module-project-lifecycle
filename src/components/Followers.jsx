@@ -1,8 +1,14 @@
+import { Typography } from '@material-ui/core';
+
 const Followers = ({ followers }) => {
 	return (
 		<div>
 			{followers.map((follower) => {
-				return <p key={follower.id}>{follower.login}</p>;
+				return (
+					<a href={follower.html_url} target='_blank'>
+						<Typography key={follower.id}>{follower.login}</Typography>
+					</a>
+				);
 			})}
 		</div>
 	);

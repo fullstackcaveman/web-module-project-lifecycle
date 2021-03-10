@@ -145,12 +145,15 @@ body {
   width: 100%;
   padding: 10px;
 }
+.container a {
+  text-decoration: none;
+}
 .container .userCard {
   height: 200px;
   margin: 10px;
   padding: 0;
 }
-.container .userCard.active {
+.container .userCard.showFollowers {
   height: auto;
 }
 .container .flex {
@@ -165,6 +168,16 @@ body {
   justify-content: center;
   text-align: left;
   margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+.container .flex-right .info-block {
+  height: 100%;
+  padding: 5px 10px;
+  width: 100%;
+}
+.container .flex-right .btn {
+  align-items: center;
 }
 .container .gitImage {
   height: 200px;

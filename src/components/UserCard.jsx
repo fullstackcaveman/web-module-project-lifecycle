@@ -28,10 +28,16 @@ class UserCard extends React.Component {
 			});
 	}
 
+	handleFollowersClick(e) {
+		const userTarget = document.getElementById(`${e.target.id}`);
+
+		userTarget.classList.add('showFollowers');
+	}
+
 	render() {
 		return (
-			<Card className='userCard'>
-				<CardActionArea className='flex'>
+			<Card id={this.props.gitUser.id} className='userCard'>
+				<div className='flex'>
 					<div className='flex-left'>
 						<CardMedia>
 							<img
@@ -42,12 +48,19 @@ class UserCard extends React.Component {
 						</CardMedia>
 					</div>
 					<div className='flex-right'>
-						<CardContent>
-							<Typography>Name: {this.props.gitUser.name} </Typography>
-							<Typography>Username: @{this.props.gitUser.login}</Typography>
+						<CardContent className='info-block'>
+							<div className='info'>
+								<Typography>Name: {this.props.gitUser.name} </Typography>
+								<Typography>Username: @{this.props.gitUser.login}</Typography>
+								<Typography>Bio: {this.props.gitUser.bio}</Typography>
+							</div>
+
+							<div className='btn' onClick={this.handleFollowersClick}>
+								<button id={this.props.gitUser.id}>Show Followers</button>
+							</div>
 						</CardContent>
 					</div>
-				</CardActionArea>
+				</div>
 				<div>
 					<CardContent>
 						{this.state.followers.map((follower) => {
