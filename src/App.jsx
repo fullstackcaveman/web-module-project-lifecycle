@@ -51,6 +51,7 @@ class App extends Component {
 	};
 
 	render() {
+		console.log(this.state.users);
 		return (
 			<div className='container'>
 				<div className='left'>
@@ -64,7 +65,7 @@ class App extends Component {
 						<input
 							type='text'
 							name='getUser'
-							placeholder='Search Users'
+							placeholder='Search GitHub Users'
 							onChange={this.handleChange}
 							value={this.state.formValue}
 						/>

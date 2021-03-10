@@ -17,4 +17,36 @@ body {
 	text-align: center;
 	width: 100%;
 	padding: 10px;
+
+	.userCard {
+		height: 200px;
+		margin: 10px;
+		padding: 0;
+
+		&.active {
+			height: auto;
+		}
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+
+	.flex-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+		margin: 0 auto;
+	}
+
+	.gitImage {
+		height: 200px;
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
 }
