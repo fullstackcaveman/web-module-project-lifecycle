@@ -1,0 +1,96 @@
+// sass --watch src/scss/main.scss:src/styles/main.css
+
+@import 'reset';
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 62.5%;
+	line-height: 1.5;
+	height: auto;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	padding: 20px;
+	width: 100%;
+
+	form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.container {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+
+	a {
+		text-decoration: none;
+	}
+
+	.userCard {
+		height: 200px;
+		margin: 10px;
+		padding: 0;
+		max-width: 100%;
+
+		&.showFollowers {
+			height: auto;
+		}
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+
+	.flex-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+		margin: 0 auto;
+		height: 100%;
+		width: 100%;
+
+		.info-block {
+			height: 100%;
+			padding: 5px 10px;
+			width: 100%;
+		}
+
+		.btn {
+			align-items: center;
+		}
+	}
+
+	.gitImage {
+		height: 200px;
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+}
